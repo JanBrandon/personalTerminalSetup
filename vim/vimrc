@@ -6,7 +6,7 @@
 filetype plugin indent on
 
 set rtp+=~/.vim/bundle/Vundle.vim
-let g:python3_host_prog = '/usr/intel/bin/python3.7.4' 
+let g:python3_host_prog = '/usr/intel/pkgs/python3/3.6.3/lib/python3.6' 
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
@@ -34,7 +34,7 @@ let g:UltiSnipsListSnippets="<c-l>"
 "Jedi vim
 let g:jedi#auto_vim_configuration = 0
 set completeopt=menuone,longest
-let g:jedi#environment_path = '/usr/intel/bin/python3.7.4'
+let g:jedi#environment_path = '/usr/intel/pkgs/python3/3.6.3/lib/python3.6'
 
 
 nnoremap <C-f> :NERDTree<CR>

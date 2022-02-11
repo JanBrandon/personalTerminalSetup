@@ -1,0 +1,23 @@
+priority -50
+
+###########################################################################
+#                            TEXTMATE SNIPPETS                            #
+###########################################################################
+
+#! header
+snippet main "main of perl"
+#!/usr/intel/pkgs/perl/5.26.1/bin/perl
+
+use strict;
+use warnings;
+use Cwd qw();
+$|=1;
+
+sub main{
+	$1
+}
+
+main();
+endsnippet
+
+# vim:ft=snippets:

@@ -1,0 +1,1 @@
+xterm -bg black -bd white -fg white -fa 'Monospace' -fs 18

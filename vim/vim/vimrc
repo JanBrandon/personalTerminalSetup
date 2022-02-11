@@ -1,0 +1,110 @@
+" Configure plugins
+"filetype plugin on
+
+"set nocompatible 
+"filetype off
+filetype plugin indent on
+
+set rtp+=~/.vim/bundle/Vundle.vim
+let g:python3_host_prog = '/usr/intel/bin/python3.7.4' 
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'scrooloose/nerdtree'
+"Plugin 'kaicataldo/material.vim'
+"Plugin 'rakr/vim-one'
+Plugin 'vim-python/python-syntax'
+"Plugin 'rjulla/pydiction'
+"Plugin 'valloric/youcompleteme'
+"Plugin 'mattn/emmet-vim'
+Plugin 'davidhalter/jedi-vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'vim-airline/vim-airline'
+Plugin 'patstockwell/vim-monokai-tasty'
+
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+call vundle#end()
+
+"Snippet Plugin
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsListSnippets="<c-l>"
+
+
+"Jedi vim
+let g:jedi#auto_vim_configuration = 0
+set completeopt=menuone,longest
+let g:jedi#environment_path = '/usr/intel/bin/python3.7.4'
+
+
+nnoremap <C-f> :NERDTree<CR>
+let NERDTreeQuitOnOpen=1
+
+" Initial configuration
+" turn hybrid line numbers on
+"set number
+"syntax on
+"set guifont=Monospace\ 16
+"colorscheme vim-monokai-tasty 
+"set mouse=a
+"set hlsearch
+"set backspace=indent,eol,start
+" Shoutcuts
+"
+"noremap <C-c> :w<CR><C-w>w
+noremap <C-a> :w<CR>
+inoremap <c-a> <Esc>:w<CR>
+vnoremap <c-a> <Esc>:w<CR>
+
+if !has("gui_running")
+    set t_Co=256
+    set term=screen-256color
+endif
+
+" fix cursor display in cygwin
+if has("win32unix")
+    let &t_ti.="\e[1 q"
+    let &t_SI.="\e[5 q"
+    let &t_EI.="\e[1 q"
+    let &t_te.="\e[0 q"
+endif
+
+"Basic configuration
+syntax on
+set number
+set relativenumber
+set autoindent
+set tabstop=4
+set shiftwidth=4
+set smarttab
+set softtabstop=4
+set mouse=a
+set scrolloff=9
+"shortcuts
+"noremap <C-a> :w<CR>
+
+nnoremap <c-a> :w<CR>
+inoremap <c-a> <Esc>:w<CR>
+
+
+colorscheme vim-monokai-tasty
+
+"Airline
+
+
+let g:airline#extensions#tabline#enabled = 1 " Enable the list of buffers
+
+"Buffer tab
+noremap <C-L> :bnext<CR>
+noremap <C-u> :bprev<CR>
+noremap <C-q> :bdelete <CR> 
+
+"Exit terminal mode
+tnoremap <Esc> <C-\><C-n>
+
+"Open terminal
+noremap <C-t> <Esc> :split<CR> <C-w>j :res -10 \| :term  <CR> :set nonumber \| :set norelativenumber <CR>i 
+
+"Change between terminal and code 
+tnoremap <C-k> <C-\><C-n><C-w>k
+noremap <C-j>  <C-w>ji

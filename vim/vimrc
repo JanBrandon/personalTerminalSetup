@@ -6,7 +6,7 @@
 filetype plugin indent on
 set rtp+=~/.vim/bundle/Vundle.vim
 "let g:python3_host_prog = '/usr/intel/pkgs/python3/3.6.3/lib/python3.6' 
-"let g:python3_host_prog = '/nfs/site/disks/home_user/jbrivera/.local/lib/python3.6' 
+"let g:python3_host_prog = '/nfs/site/home/jbrivera/workdir/pythonConf/python3.7' 
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
@@ -34,13 +34,14 @@ let g:UltiSnipsListSnippets="<c-l>"
 "Jedi vim
 
 "let g:python3_host_prog = '/usr/intel/pkgs/python3/3.6.3/lib/python3.6' 
-let g:python3_host_prog = '/usr/intel/bin/python3.6.3' 
+let g:python3_host_prog = '/usr/intel/bin/python3.7.4' 
 "let g:python3_host_prog = '/nfs/site/disks/zsc7_dhv_00075/work/jbrivera/.pythonLibs/python3.6' 
 let g:jedi#auto_vim_configuration = 0
 set completeopt=menuone,longest
 "let g:jedi#environment_path = '/usr/intel/pkgs/python3/3.6.3/lib/python3.6'
-let g:jedi#environment_path = '/nfs/site/disks/zsc7_dhv_00075/work/jbrivera/.pythonLibs/python3.6' 
-let g:jedi#environment_path = '/usr/intel/bin/python3.6.3' 
+"let g:jedi#environment_path = '/nfs/site/disks/zsc7_dhv_00075/work/jbrivera/.pythonLibs/python3.6' 
+let g:jedi#environment_path = '/usr/intel/bin/python3.7.4' 
+"let g:jedi#environment_path = '/nfs/site/home/jbrivera/workdir/pythonConf/python3.7' 
 
 nnoremap <C-f> :NERDTree<CR>
 let NERDTreeQuitOnOpen=1

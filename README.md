@@ -15,7 +15,7 @@ alias tmux tmux -2
 
 Add this lines of code in .cshrc.<user>
 stty erase "^?"
-set prompt="%{\033[1;35m%}Jan>%{\033[0m%} "
+set prompt="%{\033[1;35m%}Janet>%{\033[0m%} "
 
 
 

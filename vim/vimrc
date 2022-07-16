@@ -4,9 +4,9 @@
 "set nocompatible 
 "filetype off
 filetype plugin indent on
-
 set rtp+=~/.vim/bundle/Vundle.vim
-let g:python3_host_prog = '/usr/intel/pkgs/python3/3.6.3/lib/python3.6' 
+"let g:python3_host_prog = '/usr/intel/pkgs/python3/3.6.3/lib/python3.6' 
+"let g:python3_host_prog = '/nfs/site/disks/home_user/jbrivera/.local/lib/python3.6' 
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
@@ -32,10 +32,15 @@ let g:UltiSnipsListSnippets="<c-l>"
 
 
 "Jedi vim
+
+"let g:python3_host_prog = '/usr/intel/pkgs/python3/3.6.3/lib/python3.6' 
+let g:python3_host_prog = '/usr/intel/bin/python3.6.3' 
+"let g:python3_host_prog = '/nfs/site/disks/zsc7_dhv_00075/work/jbrivera/.pythonLibs/python3.6' 
 let g:jedi#auto_vim_configuration = 0
 set completeopt=menuone,longest
-let g:jedi#environment_path = '/usr/intel/pkgs/python3/3.6.3/lib/python3.6'
-
+"let g:jedi#environment_path = '/usr/intel/pkgs/python3/3.6.3/lib/python3.6'
+let g:jedi#environment_path = '/nfs/site/disks/zsc7_dhv_00075/work/jbrivera/.pythonLibs/python3.6' 
+let g:jedi#environment_path = '/usr/intel/bin/python3.6.3' 
 
 nnoremap <C-f> :NERDTree<CR>
 let NERDTreeQuitOnOpen=1
@@ -57,16 +62,16 @@ inoremap <c-a> <Esc>:w<CR>
 vnoremap <c-a> <Esc>:w<CR>
 
 if !has("gui_running")
-    set t_Co=256
-    set term=screen-256color
+	set t_Co=256
+	set term=screen-256color
 endif
 
 " fix cursor display in cygwin
 if has("win32unix")
-    let &t_ti.="\e[1 q"
-    let &t_SI.="\e[5 q"
-    let &t_EI.="\e[1 q"
-    let &t_te.="\e[0 q"
+	let &t_ti.="\e[1 q"
+	let &t_SI.="\e[5 q"
+	let &t_EI.="\e[1 q"
+	let &t_te.="\e[0 q"
 endif
 
 "Basic configuration
@@ -108,3 +113,4 @@ noremap <C-t> <Esc> :split<CR> <C-w>j :res -10 \| :term  <CR> :set nonumber \| :
 "Change between terminal and code 
 tnoremap <C-k> <C-\><C-n><C-w>k
 noremap <C-j>  <C-w>ji
+

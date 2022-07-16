@@ -12,6 +12,8 @@ import sys
 from shlex import split as shsplit
 from contextlib import contextmanager
 from pathlib import Path
+
+sys.path.append('/nfs/site/disks/zsc7_dhv_00075/work/jbrivera/.pythonLibs/python3.6/site-packages')
 try:
     from itertools import zip_longest
 except ImportError:
